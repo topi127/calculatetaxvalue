@@ -27,9 +27,15 @@ public class TrabalhadorContaPropria extends ContribuinteComRendimentosTrabalho{
                 '}';
     }
     public float obterTaxaRendimentosTrabalho(){
-        return 0;
+        return super.getRendimentosTrabalho() * taxaRendimentosTrabalho;
     }
     public  float obterTaxaOutrosRendimentos(){
-        return 0;
+        float OT = super.getOutrosRendimentos();
+        if (OT <= 50000){
+            this.taxaOutrosRendimentos1 = 0.02f;
+        }else{
+            this.taxaOutrosRendimentos1 = 0.05f;
+        }
+        return OT * this.taxaOutrosRendimentos1;
     }
 }

@@ -8,6 +8,12 @@ public abstract class ContribuinteComRendimentosTrabalho extends Contribuinte{
         super(nome, morada, outrosRendimentos);
         this.rendimentosTrabalho = rendimentosTrabalho;
     }
+    public float getRendimentosTrabalho() {
+        return rendimentosTrabalho;
+    }
+    public void setRendimentosTrabalho(float rendimentosTrabalho) {
+        this.rendimentosTrabalho = rendimentosTrabalho;
+    }
     @Override
     public String toString() {
         return "ContribuinteComRendimentosTrabalho{" +

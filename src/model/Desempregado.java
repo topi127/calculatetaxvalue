@@ -19,6 +19,7 @@ public class Desempregado extends Contribuinte{
                 '}';
     }
     public float calcularImposto() {
-        return 0;
+        float OR = this.getOutrosRendimentos();
+        return OR * (this.taxaOutrosRendimentos/100);
     }
 }

@@ -8,11 +8,27 @@ public abstract class Contribuinte {
         this.morada = "Sem morada";
         this.outrosRendimentos = 0;
     }
-    public Contribuinte(String nome, String morada, float outrosRendimentos) {
+    public Contribuinte(String nome, String morada, float outrosRendimentos)
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
         this.nome = nome;
+    }
+    public String getMorada() {
+        return morada;
+    }
+    public void setMorada(String morada) {
         this.morada = morada;
+    }
+    public float getOutrosRendimentos() {
+        return outrosRendimentos;
+    }
+
+    public void setOutrosRendimentos(float outrosRendimentos) {
         this.outrosRendimentos = outrosRendimentos;
     }
+
     @Override
     public String toString() {
         return "Contribuinte{" +
