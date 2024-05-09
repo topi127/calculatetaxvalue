@@ -2,13 +2,13 @@ package model;
 public abstract class Contribuinte {
     private String nome;
     private String morada;
-    private double outrosRendimentos;
+    private float outrosRendimentos;
     public Contribuinte() {
         this.nome = "Sem nome";
         this.morada = "Sem morada";
         this.outrosRendimentos = 0;
     }
-    public Contribuinte(String nome, String morada, double outrosRendimentos) {
+    public Contribuinte(String nome, String morada, float outrosRendimentos) {
         this.nome = nome;
         this.morada = morada;
         this.outrosRendimentos = outrosRendimentos;
@@ -21,5 +21,5 @@ public abstract class Contribuinte {
                 ", outrosRendimentos=" + outrosRendimentos +
                 '}';
     }
-    public abstract double calcularImposto();
+    public abstract float calcularImposto();
 }
